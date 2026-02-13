@@ -27,3 +27,20 @@ Then open `http://127.0.0.1:8000`.
 1. Push to the `main` branch.
 2. In GitHub repository settings, enable **Pages** and set **Build and deployment** to **GitHub Actions** (this must be enabled once, or GitHub will return a 404 during deployment).
 3. The `Deploy MkDocs to GitHub Pages` workflow will run `actions/configure-pages`, build the site, upload the `site/` artifact, and publish it.
+
+## Resolving merge conflicts with `main`
+
+If GitHub reports this branch is behind or has conflicts:
+
+```bash
+git fetch origin
+git checkout work
+git rebase origin/main
+# resolve conflicts in your editor
+git add <resolved-files>
+git rebase --continue
+git push --force-with-lease
+```
+
+After rebasing, re-run the GitHub Pages workflow from the **Actions** tab if needed.
+
