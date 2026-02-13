@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="content-wrap container">
+  <article class="content-card">
+    <h1>Page not found</h1>
+    <p>The page you requested does not exist.</p>
+    <p><a href="{{ nav.homepage.url | url }}">Return home</a></p>
+  </article>
+</section>
+{% endblock %}
