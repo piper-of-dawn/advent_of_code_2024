@@ -25,5 +25,5 @@ Then open `http://127.0.0.1:8000`.
 ## GitHub Pages deployment
 
 1. Push to the `main` branch.
-2. In GitHub repository settings, enable **Pages** and set **Build and deployment** to **GitHub Actions**.
-3. The `Deploy MkDocs to GitHub Pages` workflow will build and publish the `site/` output.
+2. In GitHub repository settings, enable **Pages** and set **Build and deployment** to **GitHub Actions** (this must be enabled once, or GitHub will return a 404 during deployment).
+3. The `Deploy MkDocs to GitHub Pages` workflow will run `actions/configure-pages`, build the site, upload the `site/` artifact, and publish it.
