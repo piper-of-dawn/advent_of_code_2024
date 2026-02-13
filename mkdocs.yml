@@ -1,0 +1,17 @@
+site_name: Making Software Clone
+site_url: https://example.github.io/advent_of_code_2024/
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+      - Overview: blog/index.md
+      - How we review pull requests in 15 minutes: blog/review-pull-requests.md
+      - A practical approach to architecture decision records: blog/architecture-decision-records.md
+      - Reducing deployment anxiety with progressive delivery: blog/progressive-delivery.md
+theme:
+  name: null
+  custom_dir: makingsoftware_theme
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
