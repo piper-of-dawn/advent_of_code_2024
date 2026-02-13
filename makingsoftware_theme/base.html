@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{% if page and page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+    <meta name="description" content="{{ config.site_description or 'Practical software engineering guidance.' }}" />
+    <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}" />
+  </head>
+  <body>
+    {% include "partials/header.html" %}
+    <main class="ms-main">
+      {% block content %}{% endblock %}
+    </main>
+    {% include "partials/footer.html" %}
+    <script src="{{ 'assets/javascripts/main.js' | url }}"></script>
+  </body>
+</html>

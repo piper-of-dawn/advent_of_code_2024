@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page and page.is_homepage %}
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Independent writing on software craft</p>
+        <h1>{{ page.title }}</h1>
+        <p class="lead">Clear essays on engineering leadership, architecture, and delivery for teams that care about quality.</p>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="content-wrap container">
+    <article class="content-card">
+      {{ page.content }}
+    </article>
+  </section>
+{% endblock %}

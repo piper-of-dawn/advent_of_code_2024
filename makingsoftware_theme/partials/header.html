@@ -1,0 +1,10 @@
+<header class="ms-header">
+  <div class="container nav-shell">
+    <a class="brand" href="{{ nav.homepage.url | url }}">{{ config.site_name }}</a>
+    <nav class="top-nav" aria-label="Primary">
+      {% for nav_item in nav %}
+        <a class="nav-link {% if nav_item.active %}active{% endif %}" href="{{ nav_item.url | url }}">{{ nav_item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
